@@ -3,6 +3,7 @@ import re
 
 class Course:
     def __init__(self, VAR1, VAR2, VAR4, VAR12_1):
+        # Obtains general course information
         self.parse_info(VAR1, VAR2, VAR4)
 
         # Convert VAR12_1 from unicode to ascii string
@@ -13,6 +14,7 @@ class Course:
         # Remove whitespace and empty strings from list
         VAR12_1 = [value for value in VAR12_1 if value is not ' ' and value is not '']
 
+        # Creates Section objects
         self.secs = []
         for entry in VAR12_1:
             try:
