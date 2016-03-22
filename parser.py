@@ -1,3 +1,4 @@
+import os
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
@@ -28,9 +29,9 @@ def scrape_courses(data):
     Arg data -- a list of four-element lists of the form [term, subject, course, section] where each element is a string
     '''
     course_list = []
-    # Instantiate WebDriver
-    driver = webdriver.Chrome("/Users/siphe24/documents/projects/exploration/parser/chromedriver") # GUI browser, for testing
-    #driver = webdriver.PhantomJS("/Users/siphe24/documents/projects/exploration/parser/phantomjs") # Headless browser, for deploying
+    # Instantiate WebDriver; assumes executables are in the same directory as this script
+    driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver") # GUI browser, for testing
+    #driver = webdriver.PhantomJS(os.path.dirname(os.path.abspath(__file__)) + "/phantomjs") # Headless browser, for deploying
 
     for l in data:
         # Access WebAdvisor section search page
