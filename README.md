@@ -15,7 +15,7 @@ Have Python and Selenium WebDriver installled, and have the ChromeDriver and Pha
 ##Current Capabilities
 
 At the moment, *WebConsultant*:
-- takes course information for two sections
+- takes course information for two sections from the user
 - searches WebAdvisor for the two sections
 - parses section information from the Section Information page
 - prints the information for both sections, formatted, onto the console
