@@ -1,6 +1,6 @@
 ##WebConsultant: To help do what WebAdvisor can't
 
-*WebAdvisor*'s interface is somewhat muddly and difficult to work through, but especially so when you're trying to figure out when exactly your classes are, and what your weekly schedule looks like. This projects aims to develop a web application that take care of that automatically.
+*WebAdvisor*'s interface is somewhat muddly and difficult to work through, but especially so when you're trying to figure out when exactly your classes are and what your weekly schedule looks like. This projects aims to develop a web application that can take care of that automatically.
 
 To run the Python scripts for testing, you will need:
 - [Python](https://www.python.org/downloads/) (popular high-level programming language)
