@@ -6,9 +6,13 @@ from selenium.common.exceptions import NoSuchElementException
 from course import Course
 
 def main():
-    # Get desired course from console user input
+    # a list of four-element lists of the form [term, subject, course, section] where each element is a string
     data = []
 
+    possible_terms = ['2016SP', '2015FA', '2015SU']
+    possible_subjects = ['AF', 'AH', 'AJ', 'ANTH', 'ARBC', 'ARMY', 'ART', 'ASL', 'ASTR', 'ATHL', 'BA', 'BIOL', 'BIOT', 'BRDC', 'BSM', 'CAOT', 'CFS', 'CHEM', 'CHIN', 'CHMT', 'CHS', 'CNET', 'CO', 'COMM', 'CS', 'DEAF', 'ECS', 'EDUC', 'ELI', 'ENGI', 'ENGL', 'ENVS', 'ESL', 'ETEC', 'FREN', 'FT', 'GA', 'GEOG', 'GEOL', 'HIST', 'HLTH', 'ID', 'INT', 'IS', 'JOUR', 'JPNS', 'KIN', 'LE', 'LS', 'LSP', 'MATH', 'MM', 'MUS', 'NUR', 'PD', 'PE', 'PHIL', 'PHYS', 'PS', 'PSY', 'PTA', 'RE', 'RT', 'SOC', 'SPAN', 'SPCH', 'TD', 'WEX', 'WS']
+
+    # Get desired course from console user input
     # This input method is just for testing
     term    = raw_input("Input term (2015SU, 2015FA, 2016SP): ").upper()
     subject = raw_input("Input subject code:                  ").upper()
