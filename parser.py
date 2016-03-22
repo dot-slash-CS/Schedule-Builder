@@ -93,5 +93,5 @@ def scrape_courses(data):
         course.print_info()
 
     return course_list
-    
+
 main()
