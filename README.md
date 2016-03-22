@@ -10,4 +10,4 @@ To run the Python scripts for testing, you will need:
 
 Built by Ohlone Students, for Ohlone Students.
 
-Developed and tested with Python 2.7.11
+Developed and tested with Python 2.7.11 on Mac OS X 10.11.3
