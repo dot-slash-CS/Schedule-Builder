@@ -9,17 +9,14 @@ def main():
     # a list of four-element lists of the form [term, subject, course, section] where each element is a string
     data = []
 
-    possible_terms = ['2016SP', '2015FA', '2015SU']
-    possible_subjects = ['AF', 'AH', 'AJ', 'ANTH', 'ARBC', 'ARMY', 'ART', 'ASL', 'ASTR', 'ATHL', 'BA', 'BIOL', 'BIOT', 'BRDC', 'BSM', 'CAOT', 'CFS', 'CHEM', 'CHIN', 'CHMT', 'CHS', 'CNET', 'CO', 'COMM', 'CS', 'DEAF', 'ECS', 'EDUC', 'ELI', 'ENGI', 'ENGL', 'ENVS', 'ESL', 'ETEC', 'FREN', 'FT', 'GA', 'GEOG', 'GEOL', 'HIST', 'HLTH', 'ID', 'INT', 'IS', 'JOUR', 'JPNS', 'KIN', 'LE', 'LS', 'LSP', 'MATH', 'MM', 'MUS', 'NUR', 'PD', 'PE', 'PHIL', 'PHYS', 'PS', 'PSY', 'PTA', 'RE', 'RT', 'SOC', 'SPAN', 'SPCH', 'TD', 'WEX', 'WS']
-
     # Get desired course from console user input
     # This input method is just for testing
-    term    = raw_input("Input term (2015SU, 2015FA, 2016SP): ").upper()
+    term    = raw_input("Input term (2016SP, 2016SU, 2016FA): ").upper()
     subject = raw_input("Input subject code:                  ").upper()
     course  = raw_input("Input course number:                 ").upper()
     section = raw_input("Input section number:                ").upper()
     data.append([term, subject, course, section])
-    term    = raw_input("Input term (2015SU, 2015FA, 2016SP): ").upper()
+    term    = raw_input("Input term (2016SP, 2016SU, 2016FA): ").upper()
     subject = raw_input("Input subject code:                  ").upper()
     course  = raw_input("Input course number:                 ").upper()
     section = raw_input("Input section number:                ").upper()
@@ -93,5 +90,19 @@ def scrape_courses(data):
         course.print_info()
 
     return course_list
+
+class InvalidTerm(TypeError):
+    def __init__(self):
+        TypeError.__init__(self, "Invalid term entered.")
+
+class InvalidSubject(TypeError):
+    def __init__(self):
+        TypeError.__init__(self, "Invalid subject entered.")
+
+def validate_term(term):
+    possible_terms = ['2016SP', '2016SU', '2016FA'];
+
+def validate_subject(subject):
+    possible_subjects = ['AF', 'AH', 'AJ', 'ANTH', 'ARBC', 'ARMY', 'ART', 'ASL', 'ASTR', 'ATHL', 'BA', 'BIOL', 'BIOT', 'BRDC', 'BSM', 'CAOT', 'CFS', 'CHEM', 'CHIN', 'CHMT', 'CHS', 'CNET', 'CO', 'COMM', 'CS', 'DEAF', 'ECS', 'EDUC', 'ELI', 'ENGI', 'ENGL', 'ENVS', 'ESL', 'ETEC', 'FREN', 'FT', 'GA', 'GEOG', 'GEOL', 'HIST', 'HLTH', 'ID', 'INT', 'IS', 'JOUR', 'JPNS', 'KIN', 'LE', 'LS', 'LSP', 'MATH', 'MM', 'MUS', 'NUR', 'PD', 'PE', 'PHIL', 'PHYS', 'PS', 'PSY', 'PTA', 'RE', 'RT', 'SOC', 'SPAN', 'SPCH', 'TD', 'WEX', 'WS']
 
 main()
