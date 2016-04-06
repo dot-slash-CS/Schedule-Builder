@@ -1,4 +1,4 @@
-#ScheduleBuilder: A Schedule Visualization Tool for WebAdvisor
+#A Schedule Visualization Tool for WebAdvisor
 
 WebAdvisor's interface is somewhat muddly and difficult to work through, but especially so when you're trying to figure out when exactly your classes are and what your weekly schedule looks like. This projects aims to develop a web application that can take care of that automatically.
 
