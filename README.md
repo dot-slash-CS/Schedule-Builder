@@ -1,20 +1,20 @@
-#WebConsultant: To help do what WebAdvisor can't
+#ScheduleBuilder: A Schedule Visualization Tool for WebAdvisor
 
 WebAdvisor's interface is somewhat muddly and difficult to work through, but especially so when you're trying to figure out when exactly your classes are and what your weekly schedule looks like. This projects aims to develop a web application that can take care of that automatically.
 
 ##Execution Essentials
 
-To run *WebConsultant* for testing, you will need:
+To run *ScheduleBuilder* for testing, you will need:
 - [Python](https://www.python.org/downloads/) (popular high-level programming language)
 - [Selenium WebDriver](http://www.seleniumhq.org/docs/03_webdriver.jsp) (tool for scripted/programmatic web browsing)
 - [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) (GUI browser)
 - [PhantomJS](http://phantomjs.org/) (GUI-less, or "headless", browser)
 
-Have Python and Selenium WebDriver installled, and have the ChromeDriver and PhantomJS executables in the same directory as the Python files. To run *WebConsultant*, navigate to the directory containing the Python files in command line and use `python parser.py`.
+Have Python and Selenium WebDriver installled, and have the ChromeDriver and PhantomJS executables in the same directory as the Python files. To run *ScheduleBuilder*, navigate to the directory containing the Python files in command line and use `python parser.py`.
 
 ##Current Capabilities
 
-At the moment, *WebConsultant*:
+At the moment, *ScheduleBuilder*:
 - takes course information for two sections from the user
 - searches WebAdvisor for the two sections
 - parses section information from the Section Information page
