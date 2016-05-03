@@ -1,4 +1,6 @@
 import os
+
+# Use the Selenium WebDriver to access internet
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
@@ -26,8 +28,8 @@ def scrape_courses(data):
     '''
     course_list = []
     # Instantiate WebDriver; assumes executables are in the same directory as this script
-    driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver") # GUI browser, for testing
-    #driver = webdriver.PhantomJS(os.path.dirname(os.path.abspath(__file__)) + "/phantomjs") # Headless browser, for deploying
+    #driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver") # GUI browser, for testing
+    driver = webdriver.PhantomJS(os.path.dirname(os.path.abspath(__file__)) + "/phantomjs") # Headless browser, for deploying
 
     for l in data: # l is a four-element list of the form [term, subject, course, section]
         # Access WebAdvisor section search page
@@ -81,6 +83,7 @@ def scrape_courses(data):
     driver.quit()
 
     # Print courses to console, for testing
+    print
     for course in course_list:
         course.print_info()
 
