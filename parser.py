@@ -16,11 +16,6 @@ def main():
     course  = raw_input("Input course number:                 ").upper()
     section = raw_input("Input section number:                ").upper()
     data.append([term, subject, course, section])
-    term    = raw_input("Input term (2016SP, 2016SU, 2016FA): ").upper()
-    subject = raw_input("Input subject code:                  ").upper()
-    course  = raw_input("Input course number:                 ").upper()
-    section = raw_input("Input section number:                ").upper()
-    data.append([term, subject, course, section])
 
     courses = scrape_courses(data)
 
