@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:                                                                               #Product ID
+
+BEGIN:VEVENT
+CREATED:[YYYYMMDD]T[HHMMSS]Z                                                          #date and time calendar event was created
+RRULE:FREQ=WEEKLY;UNTIL=[YYYYMMDD]T[HHMMSS]Z;BYDAY=SU,MO,TU,WE,TH,FR,SA               #these are the days it repeats each week
+DTEND;TZID=America/Los_Angeles:[YYYYMMDD]T[HHMMSS]                                    #time and date the event ends
+SUMMARY:EVENT TITLE                                                                   #this is the events title
+DTSTART;TZID=America/Los_Angeles:[YYYYMMDD]T[HHMMSS]                                  #time and date the event starts
+DESCRIPTION: NOTES                                                                    #this is a notes section
+END:VEVENT
+
+END:VCALENDAR
+
+
+#anything in brackets needs to be changed and put in without brackets
