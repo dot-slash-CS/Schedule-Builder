@@ -8,6 +8,11 @@ from selenium.common.exceptions import NoSuchElementException
 from course import Course
 
 def main():
+    howmany = input("How many classes would you like to input?: ")
+    for x in range(0,howmany):
+    	runthrough ()
+
+def runthrough ():
     # a list of four-element lists of the form [term, subject, course, section] where each element is a string
     data = []
 
