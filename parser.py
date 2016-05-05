@@ -8,21 +8,19 @@ from selenium.common.exceptions import NoSuchElementException
 from course import Course
 
 def main():
-    howmany = input("How many classes would you like to input?: ")
-    for x in range(0,howmany):
-    	runthrough ()
 
-def runthrough ():
     # a list of four-element lists of the form [term, subject, course, section] where each element is a string
     data = []
-
-    # Get desired course from console user input
-    # This input method is just for testing
-    term    = raw_input("Input term (2016SP, 2016SU, 2016FA): ").upper()
-    subject = raw_input("Input subject code:                  ").upper()
-    course  = raw_input("Input course number:                 ").upper()
-    section = raw_input("Input section number:                ").upper()
-    data.append([term, subject, course, section])
+    
+    howmany = input("How many classes would you like to input?: ")
+    for x in range(0,howmany):
+        # Get desired course from console user input
+        # This input method is just for testing
+        term    = raw_input("Input term (2016SP, 2016SU, 2016FA): ").upper()
+        subject = raw_input("Input subject code:                  ").upper()
+        course  = raw_input("Input course number:                 ").upper()
+        section = raw_input("Input section number:                ").upper()
+        data.append([term, subject, course, section])
 
     courses = scrape_courses(data)
 
@@ -33,8 +31,8 @@ def scrape_courses(data):
     '''
     course_list = []
     # Instantiate WebDriver; assumes executables are in the same directory as this script
-    #driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver") # GUI browser, for testing
-    driver = webdriver.PhantomJS(os.path.dirname(os.path.abspath(__file__)) + "/phantomjs") # Headless browser, for deploying
+    driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver") # GUI browser, for testing
+    #driver = webdriver.PhantomJS(os.path.dirname(os.path.abspath(__file__)) + "/phantomjs") # Headless browser, for deploying
 
     for l in data: # l is a four-element list of the form [term, subject, course, section]
         # Access WebAdvisor section search page
