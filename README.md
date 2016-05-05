@@ -15,10 +15,10 @@ Have Python and Selenium WebDriver installled, and have the ChromeDriver and Pha
 ##Current Capabilities
 
 At the moment, *ScheduleBuilder*:
-- takes course information for a section from the user
-- searches WebAdvisor for the a section
+- takes course identification information for a number of sections from the user
+- searches WebAdvisor for the sections
 - parses section information from the Section Information page
-- prints the information for both sections, formatted, onto the console
+- prints the information for the sections, formatted, onto the console
 
 ##Miscellaneous Mentions
 
