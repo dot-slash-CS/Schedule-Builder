@@ -15,7 +15,7 @@ To set everything up to run *ScheduleBuilder*:
 - have Python and Selenium WebDriver installed
 - have the ChromeDriver and PhantomJS executables in the same directory as the Python files
 - install the required Python packages using the command `pip install -r requirements.txt`
-    * It's recommended that you utilize [Virtual Environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/), but that's complicated and optional
+    * It's recommended that you utilize [Virtual Environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/), but that's complicated and optional.
 
 To run *ScheduleBuilder*:
 - navigate to the directory containing the Python files in command line
@@ -25,10 +25,9 @@ To run *ScheduleBuilder*:
 ##Current Capabilities
 
 At the moment, *ScheduleBuilder*:
-- takes course identification information for a number of sections from the user
+- takes course identification information for a number of sections from the user through a webpage
 - searches WebAdvisor for the sections
 - parses section information from the Section Information page
-- prints the information for the sections, formatted, onto the console
 
 ##Miscellaneous Mentions
 
