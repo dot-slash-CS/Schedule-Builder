@@ -1,6 +1,8 @@
 #A Schedule Visualization Tool for WebAdvisor
 
-WebAdvisor's interface is somewhat muddly and difficult to work through, but especially so when you're trying to figure out when exactly your classes are and what your weekly schedule looks like. This projects aims to develop a web application that can take care of that automatically.
+WebAdvisor is Ohlone Community College's student portal, through which students register for courses, among other functions.
+
+WebAdvisor's interface is somewhat muddly and difficult to work through, but especially so when you're trying to figure out when exactly your classes are and what your weekly schedule looks like. The site has no present capacity for students to view their weekly courseload in a calendar layout. This projects aims to develop a web application that can take care of that automatically.
 
 ##Execution Essentials
 
@@ -28,6 +30,9 @@ At the moment, *ScheduleBuilder*:
 - takes course identification information for a number of sections from the user through a webpage
 - searches WebAdvisor for the sections
 - parses section information from the Section Information page
+
+At the moment, *ScheduleBuilder* does not:
+- display weekly semester courseload in a calendar layout
 
 ##Miscellaneous Mentions
 
