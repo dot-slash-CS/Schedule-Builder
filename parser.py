@@ -35,7 +35,7 @@ def scrape_courses(data):
     #driver = webdriver.PhantomJS(os.path.dirname(os.path.abspath(__file__)) + "/phantomjs") # Headless browser, for deploying
 
     # Access WebAdvisor section search page
-    driver.get("https://webadvisor.ohlone.edu/WebAdvisor/WebAdvisor?CONSTITUENCY=WBST&type=P&pid=ST-XWESTS12A")
+    driver.get("https://webadvisor.ohlone.edu/WebAdvisor/WebAdvisor?SS=2&APP=ST&CONSTITUENCY=WBST")
     # Select term from drop-down menu
     try:
         Select(driver.find_element_by_id('VAR1')).select_by_value(data[0])
