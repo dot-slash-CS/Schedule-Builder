@@ -38,4 +38,4 @@ At the moment, *ScheduleBuilder* does not:
 
 Built by Ohlone Students, for Ohlone Students.
 
-Developed and tested with Python 2.7.11 on Mac OS X 10.11.5
+Developed and tested with Python 2.7.11 on macOS Sierra 10.12.3
