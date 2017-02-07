@@ -1,0 +1,15 @@
+# ignore WebDriver files
+chromedriver
+phantomjs
+
+# ignore compiled Python
+*.pyc
+
+# ignore log files
+*.log
+
+# ignore venv
+venv
+
+# ignore .DS_Store files in macOS
+.DS_Store
