@@ -31,11 +31,15 @@ def scrape_courses(data):
     Arg data -- a four-element list of the form [term, subject, courseNum, sectionNum] where each element is a string
     '''
     # Instantiate WebDriver; assumes executables are in the same directory as this script
-    driver = webdriver.Chrome(os.path.dirname(os.path.abspath(__file__)) + "/chromedriver") # GUI browser, for testing
-    #driver = webdriver.PhantomJS(os.path.dirname(os.path.abspath(__file__)) + "/phantomjs") # Headless browser, for deploying
+    driver = webdriver.Chrome(os.path.join(os.path.abspath(os.path.dirname(__file__)), "chromedriver")) # GUI browser, for testing
+    #driver = webdriver.PhantomJS(os.path.join(os.path.abspath(os.path.dirname(__file__)), "phantomjs")) # Headless browser, for deploying
 
-    # Access WebAdvisor section search page
-    driver.get("https://webadvisor.ohlone.edu/WebAdvisor/WebAdvisor?SS=2&APP=ST&CONSTITUENCY=WBST")
+    # Access WebAdvisor main page
+    driver.get("https://webadvisor.ohlone.edu/WebAdvisor/WebAdvisor")
+
+    # Navigate to search page
+    driver.find_element_by_link_text('Search for Sections').click()
+
     # Select term from drop-down menu
     try:
         Select(driver.find_element_by_id('VAR1')).select_by_value(data[0])
