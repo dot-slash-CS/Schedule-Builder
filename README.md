@@ -34,6 +34,7 @@ At the moment, *ScheduleBuilder*:
 - parses section information from the Section Information page using regex
 
 At the moment, *ScheduleBuilder* does not:
+- store course information in JSON
 - display weekly semester courseload in a single-week calendar layout using JavaScript
 
 ##Miscellaneous Mentions
