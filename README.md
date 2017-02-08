@@ -4,6 +4,8 @@ WebAdvisor is Ohlone Community College's student portal, through which students 
 
 WebAdvisor's interface is somewhat muddly and difficult to work through, but especially so when you're trying to figure out when exactly your classes are and what your weekly schedule looks like. The site has no present capacity for students to view their weekly courseload in a calendar layout. This projects aims to develop a web application that can take care of that automatically.
 
+This project is intended to be a proof of concept. The main feature is the single-week calendar display, and the goal is to have this feature approved and implemented in WebAdvisor. The WebDriver backend is not intended to make it to production.
+
 ##Execution Essentials
 
 To run *ScheduleBuilder* for testing, you will need:
@@ -28,11 +30,11 @@ To run *ScheduleBuilder*:
 
 At the moment, *ScheduleBuilder*:
 - takes course identification information for a number of sections from the user through a webpage
-- searches WebAdvisor for the sections
-- parses section information from the Section Information page
+- searches WebAdvisor for the sections using Selenium WebDriver
+- parses section information from the Section Information page using regex
 
 At the moment, *ScheduleBuilder* does not:
-- display weekly semester courseload in a calendar layout
+- display weekly semester courseload in a single-week calendar layout using JavaScript
 
 ##Miscellaneous Mentions
 
