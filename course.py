@@ -33,15 +33,14 @@ class Course:
         self.credits = VAR4
         return
 
-    def print_info(self):
-        print self.title
-        print self.subject_code + " " + self.course_num + "-" + self.sec_num
-        print self.credits + " credits"
-        print
+    def to_string(self):
+        result = (self.title + "\n"
+            + self.subject_code + " " + self.course_num + "-" + self.sec_num + "\n"
+            + self.credits + " credits" + "\n"
+            + "\n")
         for sec in self.secs:
-            sec.print_info()
-            print
-        return
+            result += sec.to_string() + "\n\n"
+        return result
 
     def get_num_sec(self):
         return len(self.secs)
@@ -71,11 +70,9 @@ class Section:
         self.classroom = re.search(r"(Building )?[0-9]?( , )?Room [0-9A-Za-z\-]+", VAR12_1_sec).group(0)
         return
 
-    def print_info(self):
-        print self.type + " (" + self.sec_num + ")"
-        print self.start_date + " - " + self.end_date
-        sys.stdout.write(", ".join(self.days))
-        print
-        print self.start_time + " - " + self.end_time
-        print self.campus + " " + self.classroom
-        return
+    def to_string(self):
+        return (self.type + " (" + self.sec_num + ")" + "\n"
+            + self.start_date + " - " + self.end_date + "\n"
+            + ", ".join(self.days) + "\n"
+            + self.start_time + " - " + self.end_time + "\n"
+            + self.campus + " " + self.classroom + "\n")
