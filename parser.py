@@ -23,7 +23,7 @@ def query():
     sectionNum = request.form['sectionNum']
     data = [term, subject, courseNum, sectionNum]
     course = scrape_courses(data)
-    return "Success!"
+    return course.to_string().replace("\n", "<br>")
 
 def scrape_courses(data):
     '''Returns the course gathered from data.
