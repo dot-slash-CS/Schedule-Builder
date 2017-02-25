@@ -9,7 +9,7 @@ This project is intended to be a proof of concept. The main feature is the singl
 ##Execution Essentials
 
 To run *ScheduleBuilder* for testing, you will need:
-- [Python](https://www.python.org/downloads/) (popular high-level programming language)
+- [Python3](https://www.python.org/downloads/) (popular high-level programming language)
 - [pip](https://pip.pypa.io/en/stable/installing/) (package manager for Python)
 - [Selenium WebDriver](http://www.seleniumhq.org/docs/03_webdriver.jsp) (tool for scripted/programmatic web browsing)
 - [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) (GUI browser)
@@ -23,7 +23,7 @@ To set everything up to run *ScheduleBuilder*:
 
 To run *ScheduleBuilder*:
 - navigate to the directory containing the Python files in command line
-- use the command `python parser.py`.
+- use the command `python3 parser.py`.
 - open your web browser and navigate to `http://localhost:5000/`
 
 ##Current Capabilities
@@ -41,4 +41,4 @@ At the moment, *ScheduleBuilder* does not:
 
 Built by Ohlone Students, for Ohlone Students.
 
-Developed and tested with Python 2.7.11 on macOS Sierra 10.12.3
+Developed and tested with Python 3.6.0 on macOS Sierra 10.12.3
