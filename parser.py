@@ -31,8 +31,8 @@ def scrape_courses(data):
     Arg data -- a four-element list of the form [term, subject, courseNum, sectionNum] where each element is a string
     '''
     # Instantiate WebDriver; assumes executables are in the same directory as this script
-    driver = webdriver.Chrome(os.path.join(os.path.abspath(os.path.dirname(__file__)), "chromedriver")) # GUI browser, for testing
-    #driver = webdriver.PhantomJS(os.path.join(os.path.abspath(os.path.dirname(__file__)), "phantomjs")) # Headless browser, for deploying
+    # driver = webdriver.Chrome(os.path.join(os.path.abspath(os.path.dirname(__file__)), "chromedriver")) # GUI browser, for testing
+    driver = webdriver.PhantomJS(os.path.join(os.path.abspath(os.path.dirname(__file__)), "phantomjs")) # Headless browser, for deploying
 
     # Access WebAdvisor main page
     driver.get("https://webadvisor.ohlone.edu/WebAdvisor/WebAdvisor")
@@ -44,14 +44,14 @@ def scrape_courses(data):
     try:
         Select(driver.find_element_by_id('VAR1')).select_by_value(data[0])
     except NoSuchElementException: # This shouldn't happen if validation is in place
-        print "Invalid Term"
+        print("Invalid Term")
         driver.quit()
         return
     # Select subject from drop-down menu
     try:
         Select(driver.find_element_by_id('LIST_VAR1_1')).select_by_value(data[1])
     except NoSuchElementException: # This shouldn't happen if validation is in place
-        print "Invalid Subject"
+        print("Invalid Subject")
         driver.quit()
         return
     # Input course via text box
@@ -64,7 +64,7 @@ def scrape_courses(data):
     try:
         driver.find_element_by_id('SEC_SHORT_TITLE_1').click()
     except NoSuchElementException:
-        print "No such Course/Section found."
+        print("No such Course/Section found.")
         driver.quit()
         return
     # Set focus to new tab
@@ -80,7 +80,7 @@ def scrape_courses(data):
     try:
         course = Course(VAR1, VAR2, VAR4, VAR12_1)
     except ValueError:
-        print "Not enough information available from WebAdvisor"
+        print("Not enough information available from WebAdvisor")
 
     driver.quit()
 
