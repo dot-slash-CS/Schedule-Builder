@@ -18,7 +18,7 @@ To run *ScheduleBuilder* for testing, you will need:
 To set everything up to run *ScheduleBuilder*:
 - have Python and Selenium WebDriver installed
 - have the ChromeDriver and PhantomJS executables in the same directory as the Python files
-- install the required Python packages using the command `pip install -r requirements.txt`
+- install the required Python packages using the command `pip3 install -r requirements.txt`
     * It's recommended that you utilize [Virtual Environments](http://docs.python-guide.org/en/latest/dev/virtualenvs/), but that's complicated and optional.
 
 To run *ScheduleBuilder*:
