@@ -1,4 +1,4 @@
-#A Schedule Visualization Tool for WebAdvisor
+# A Schedule Visualization Tool for WebAdvisor
 
 WebAdvisor is Ohlone Community College's student portal, through which students register for courses, among other functions.
 
@@ -6,7 +6,7 @@ WebAdvisor's interface is somewhat muddly and difficult to work through, but esp
 
 This project is intended to be a proof of concept. The main feature is the single-week calendar display, and the goal is to have this feature approved and implemented in WebAdvisor. The WebDriver backend is not intended to make it to production.
 
-##Execution Essentials
+## Execution Essentials
 
 To run *ScheduleBuilder* for testing, you will need:
 - [Python3](https://www.python.org/downloads/) (popular high-level programming language)
@@ -26,7 +26,7 @@ To run *ScheduleBuilder*:
 - use the command `python3 parser.py`.
 - open your web browser and navigate to `http://localhost:5000/`
 
-##Current Capabilities
+## Current Capabilities
 
 At the moment, *ScheduleBuilder*:
 - takes course identification information for a number of sections from the user through a webpage
@@ -37,7 +37,7 @@ At the moment, *ScheduleBuilder* does not:
 - store course information in JSON
 - display weekly semester courseload in a single-week calendar layout using JavaScript
 
-##Miscellaneous Mentions
+## Miscellaneous Mentions
 
 Built by Ohlone Students, for Ohlone Students.
 
